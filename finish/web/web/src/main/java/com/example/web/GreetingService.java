@@ -7,7 +7,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class GreetingService {
-  private static final String URL = "http://localhost:9090";
+  private static final String URL = "http://localhost:5050";
   private RestTemplate rest = AppConfig.restTemplate();
 
   public String getGreeting() {
