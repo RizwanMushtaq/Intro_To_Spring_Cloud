@@ -2,6 +2,7 @@ package com.example.greeting;
 
 import java.util.logging.Logger;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,11 +11,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingController {
   private static final Logger LOG = Logger.getLogger(GreetingController.class.getName());
 
+  @Autowired
   private GreetingProperties greetingProperties;
-
-  public GreetingController(GreetingProperties greetingProperties) {
-    this.greetingProperties = greetingProperties;
-  }
 
   @GetMapping("/{languageCode}")
   public String getGreeting(@PathVariable String languageCode) {
