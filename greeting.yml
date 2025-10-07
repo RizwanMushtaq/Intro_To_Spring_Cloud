@@ -1,3 +1,11 @@
 server:
   port: 5050
 message: Hello from greeting app
+greeting: Hello
+greetings:
+  EN: Hello
+  ES: Hola
+  DE: Hallo
+  EN-US: Hello
+  ES-SE: Hola
+  DE-DE: Hallo
